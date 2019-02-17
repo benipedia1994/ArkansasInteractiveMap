@@ -1,0 +1,169 @@
+body{
+    font-family: Arial;
+    background-color:#fff2e6;
+}
+
+.navbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+li{
+    float: left;
+}
+#name{
+   
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 16px 18px;
+    font-size: 1.5em;
+}
+#stylechange{}
+.self{
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    padding: 15px 15px;
+    border-radius:50%
+
+}
+li a:hover {
+    background-color: white;
+    color: black;
+}
+.intro{
+    text-align:center;
+}
+.introduction{
+    padding-left: 100px;
+    padding-right:100px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+.boxhead{
+    text-align: center;
+}
+.boxtext{
+    text-align: center;
+}
+.box{
+    padding: 25px 25px 25px 25px;
+    width: 30%;
+    border-radius: 50%;
+    
+}
+ .box:hover{
+    animation-name: backgroundmaker;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes backgroundmaker{
+    100%{
+        background-color: black;
+    }
+}
+.boxtext{
+    color:#fff2e6; 
+}
+
+.box:hover .boxhead{
+    animation-name: textchange;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+}
+.PicContainer{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.row{
+    display:flex;
+    flex-direction: row;
+    padding: 15px 15px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.column{
+    padding: 0 4px;
+    width:50%;
+    max-width: 50%;
+  }
+  .column img{
+    margin-top: 8px;
+    vertical-align: middle;
+    width:100%;
+  }
+  .centered{
+    position: absolute;
+    text-align:center;
+    top: 50%;
+    left: 51.5%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-family: Impact, fantasy;
+    font-size: 10vw;
+}
+.centered2{
+    font-size: 5vw;
+}
+#TLcorner{
+    border-radius: 100% 0% 0% 0%;
+    fit-con
+}
+#TRcorner{
+    border-radius: 0% 100% 0% 0%;
+    filter: brightness(80%);
+}
+#BRcorner{
+    border-radius: 0% 0% 100% 0%;
+    filter: brightness(80%);
+}
+#BLcorner{
+    border-radius: 0% 0% 0% 100%;
+}
+
+
+
+.PicContainer:hover a{
+    animation-name: colorchange;
+    animation-duration: 250ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes colorchange{
+    100%{
+        color:#0073e6;
+    }
+} 
+.PicContainer:hover .PicLink{
+    animation-name:darken;
+    animation-duration: 500ms;
+    animation-fill-mode:forwards;
+}
+@keyframes darken{
+    100%{
+        filter: brightness(50%);
+    }
+}
+a{
+    color:inherit; 
+    text-decoration: none;
+}
+#DroneText{
+    text-shadow: 1.5px 1.5px #252424;
+}

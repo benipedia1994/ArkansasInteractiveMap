@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title> Ben Stone Zone Home</title>
+</head>
+<body>
+
+<div id = "stylechange">
+    <img class = "self" src = "/static/pics/Profile.JPG">
+
+
+    <div class = "row">
+            <div class = "column">
+                <div class = "PicContainer">
+                    <img src="/static/pics/CodingSquare.jpg"  id="TLcorner" class = "PicLink">
+                    <div class = "centered centered2"><a href ="#">Coding</a></div>
+                </div>
+                <div class="PicContainer">
+                    <a href="{{url_for('nature')}}"><img src="/static/pics/NatureSquare.jpg" id="BLcorner"
+                        class = "PicLink"></a>
+                    <div class="centered centered2"><a href="{{url_for('nature')}}">Nature</a></div>
+                </div>
+            </div>
+            <div class = "column">
+                <div class="PicContainer">
+                    <img src="/static/pics/UkuleleSquare.jpg" id= "TRcorner" class = "PicLink">
+                    <div class="centered centered2"><a href ="#">Music</a></div>
+                </div>
+                <div class="PicContainer">
+                    <img src="/static/pics/DronesSquare.jpg" id="BRcorner" class = "PicLink">
+                    <div class ="centered centered2" id = "DroneText"><a href ="#">Drones</a></div>
+                </div>
+            </div>
+        </div>
+</div>
+</body>
+
+</html>

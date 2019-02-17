@@ -1,0 +1,93 @@
+body{
+    font-family: Arial;
+    background-color:#fff2e6;
+}
+
+.navbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+li{
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 16px 18px;
+    font-size: 1.5em;
+}
+
+.PicContainer{
+    position: relative;
+    text-align: center;
+    color: white;
+    
+}
+.OzarksFall{
+    width: 100%;
+}
+.centered{
+    position: absolute;
+    text-align:center;
+    top: 50%;
+    left: 51.5%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-family: Impact, fantasy;
+    font-size: 10vw;
+}
+.centered2{
+    font-size: 5vw;
+}
+#MapHeader{
+    text-align: center;
+    color:#262626
+}
+#map {
+        height: 600px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+.row{
+    display:flex;
+    flex-direction: row;
+    padding: 0 4px;
+}
+.column{
+    padding: 0 4px;
+    width:50%;
+    max-width: 50%;
+  }
+  .column img{
+    margin-top: 8px;
+    vertical-align: middle;
+    width:100%;
+  }
+  .top-left{
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      font-size: 3vw;
+      font-family: Impact, fantasy;
+      color: white
+  }
+  .bottom-right{
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
+      font-size: 3vw;
+      font-family: Impact, fantasy;
+      color: white;
+  }
+  .CenteredVid{
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 15px;
+  }

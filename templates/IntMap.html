@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mapstyle.css') }}">
+  </head>
+  <body>
+
+<div id="map"></div>
+        <script>
+        // Initialize and add the map
+        function initMap() {
+        // The location of Uluru
+        var littleRock = {lat: 34.746310, lng:-92.263645};
+        var mountain = '/static/icons/MountainResize.png'
+        var waterfall = '/static/icons/waterfallResize.png'
+        // The map, centered at Uluru
+        var map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 7, center: littleRock});
+        // The marker, positioned at Uluru
+
+        
+                function addLocation(coordinates,header,map,icon,gif){
+                
+                    var marker = new google.maps.Marker({position:coordinates, map:map, icon:icon});
+                var infoWindow = new google.maps.InfoWindow({
+                        content:`<h1 style = "text-align:center">${header}</h1>
+                            <img style = "width: 500px; display: block; margin-left:auto; margin-right: auto;" src = "${gif}">`
+                    });
+                
+                    marker.addListener('click', function(){
+                        infoWindow.open(map,marker)
+                    });
+                    
+                }
+            
+                
+
+
+        addLocation({lat:36.012279, lng:-93.380390},"Lost Valley",map,waterfall,"/static/natgifs/LostValleyGif.gif" );
+        addLocation({lat:35.562956, lng:-92.265045}, "SugarLoaf on the Lake", map, mountain, "/static/natgifs/SugarLoafGif.gif");
+        addLocation({lat:36.044943,lng:-93.283227}, "Indian Creek", map, waterfall, "/static/natgifs/IndianCreekGif.gif");
+        addLocation({lat:35.963683,lng:-92.17035}, "Mirror Lake", map, waterfall, "/static/natgifs/MirrorLakeGif.gif");
+        addLocation({lat:35.880455,lng:-91.852217}, "Painter's Bluff", map, mountain, "/static/natgifs/PaintersBluffGif.gif");
+        addLocation({lat:35.470186, lng:-92.038396},"Bridal Veil Falls", map, waterfall, "/static/natgifs/BridalVeilGif.gif");
+        addLocation({lat:36.167855, lng: -92.444811},"Buffalo City", map, mountain, "/static/natgifs/BuffaloCityGif.gif");
+        addLocation({lat:36.102755,lng:-92.187037}, "City Rock Bluff", map, mountain, "/static/natgifs/CityRockBluffGif.gif");
+        addLocation({lat:35.722055,lng:-92.949574}, "Falling Water Falls", map, waterfall, "/static/natgifs/FallingWaterGif.gif");
+        addLocation({lat:35.828603, lng:-93.390456}, "Glory Hole Falls", map, waterfall, "/static/natgifs/GloryHoleGif.gif");
+        addLocation({lat:36.052369,lng:-93.323048},"Big Bluff/ Goat Trail",map, mountain, "/static/natgifs/GoatTrailGif.gif");
+        addLocation({lat:36.543898,lng:-91.643765}, "Grand Gulf State Park",map, mountain, "/static/natgifs/GrandGulfGif.gif");
+        addLocation({lat:35.997643, lng:-92.204780},"Gunner Pool", map, waterfall, "/static/natgifs/GunnerPoolGif.gif");
+        addLocation({lat:35.67601,lng:-93.255070}, "Haw Creek Falls", map, waterfall,"/static/natgifs/HawCreekGif.gif");
+        addLocation({lat:36.012230,lng:-92.686275},"Red Bluff Overlook", map, mountain,"/static/natgifs/RedBluffGif.gif");
+        addLocation({lat:35.761910,lng:-92.937040},"Six Fingers Falls", map, waterfall, "/static/natgifs/SixFingersGif.gif");
+        addLocation({lat:36.016747,lng:-92.178521},"Steele Falls", map, waterfall,"/static/natgifs/SteeleFallsGif.gif");
+        addLocation({lat:36.056761,lng:-93.257003},"Triple Falls", map, waterfall, "/static/natgifs/TripleFallsGif.gif");
+        addLocation({lat:35.898520,lng:-93.457143}, "Whitaker Point", map, mountain,"/static/natgifs/WhitakerPointGif.gif");
+        addLocation({lat:35.692269,lng:-93.955859},"White Rock Mountain", map, mountain, "/static/natgifs/WhiteRockGif.gif");
+
+
+    /*
+    var marker = new google.maps.Marker({position: lostValley, map: map, icon: waterfall});
+    
+        var infoWindow = new google.maps.InfoWindow({
+            content: `<h1>Lost Valley</h1>
+                    <img style = "width: 400px;" src = "https://i.imgur.com/1bxk8Dr.gif">`
+        });
+        marker.addListener('click', function(){
+            infoWindow.open(map,marker);
+        });
+
+    var marker2 = new google.maps.Marker({position: sugarLoaf, map: map, icon: mountain});
+    */
+    }
+
+        </script>
+        <!--Load the API from the specified URL
+        * The async attribute allows the browser to render the page while the API loads
+        * The key parameter will contain your own API key (which is not needed for this tutorial)
+        * The callback parameter executes the initMap() function
+        -->
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhhlrgChpYL3jKM6zkxISbAfiULryHXU8
+    &callback=initMap">
+        </script>
+
+</body>
+</html>
